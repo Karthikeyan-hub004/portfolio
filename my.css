@@ -1,0 +1,370 @@
+*{
+    padding: 0;
+    margin:0;
+  }
+  label{
+      font-size: 60px;
+      font-family: 'Franklin , 'Arial 'Narrow', Arial, sans-serif;
+  }
+  #nav{
+      display: contents;
+  }
+  #nav ul{
+      box-shadow: 4px 7px 10px 0px rgb(238, 189, 130);
+       position: fixed;
+      width: 100%;
+      z-index: 1;
+      background-color: #EDDFE0;
+  }
+  .bar li {
+      display: inline-flex;
+      flex-direction: column;
+      position: relative;
+      left: 20%;
+      padding-left:20px;
+      list-style: none;
+  }
+  .bar  li a{
+      font-size: 40px;
+      text-decoration: none;
+      font-family: serif;
+      text-transform: uppercase;
+  }
+  .bar li a:hover{
+      color: coral;
+      transition: 1.5s;
+      scale: 1.1;
+  }
+  .bt{
+      display: none;
+      cursor: pointer;
+  }
+  #check{
+    display: none;
+  }
+  #me{
+    top: 20%;
+    left: 15%;
+    height: 400px;
+    width: 400px;
+    border: 6px,solid,turquoise;
+    filter: drop-shadow(turquoise  8px 0px 15px );
+    border-radius: 50%;
+}
+.back{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10%;    
+}
+.text{
+    background: linear-gradient(to right,turquoise,rgb(255, 0, 208),rgb(136, 134, 224));
+    background-size: cover;
+    background-clip: text;
+    color: transparent; 
+    font-size: 50px;
+    padding-left: 80px;
+    text-transform: uppercase;
+    
+}
+#head{
+    display: block;
+    text-transform: uppercase;
+    text-decoration: solid;
+    font-family:serif;
+    font-size: 80px;
+    padding-top: 10%;
+}
+#about{
+    margin-top: 15%;
+    background-color: #B7B7B7;
+}
+#about p{
+    display: inline-block;
+    padding: 10%;
+    font-size: 40px;
+    padding-top: 2%;
+     
+}
+#skill{
+    display: flex;
+    width: 250px;
+    height: 250px; 
+    
+
+}
+#skills{
+       padding-top: 10%;
+}
+.note{
+    float: right;
+    font-size: 35px;
+    text-transform: capitalize;
+}
+#contact{
+    margin-top: 20%;
+    background-color: #F6EACB;
+    
+}
+.link{
+    display: flex;
+    flex-direction: row;
+    gap: 10%;
+    justify-content: center;
+}
+#link  li {
+    display:flex;
+} 
+#link li a{
+    color: black;
+    padding: 5%;
+    font-size: 80px;
+    text-decoration: none;
+    list-style: none;
+}  
+.fa-instagram:hover{
+    color: rgb(227, 27, 187);
+}
+.fa-instagram:hover::after{
+    content: "insta";
+    color: rgb(227, 27, 187);
+    font-size: 40px;
+    font-family: serif;
+    text-transform: uppercase;
+}
+.fa-telegram:hover{
+    color: rgb(28, 43, 206);
+}
+.fa-telegram:hover::after{
+    content: "telegram";
+    color: rgb(44, 14, 241);
+    font-size: 40px;
+    font-family: serif;
+    text-transform: uppercase;
+}
+.fa-github:hover{
+    color: rgb(16, 15, 15);
+}
+.fa-github:hover::after{
+    content: "github";
+    color: rgb(22, 21, 26);
+    font-size: 40px;
+    font-family: serif;
+    text-transform: uppercase;
+}
+.fa-linkedin:hover{
+    color: rgb(57, 27, 231);
+}
+.fa-linkedin:hover::after{
+    content: "linkedin";
+    font-size: 40px;
+    font-family: serif;
+    text-transform: uppercase;
+}
+.fa-user-tie:hover{
+    color: rgb(18, 240, 44);
+}
+.fa-user-tie:hover::after{
+    content: "resume";
+    font-size: 40px;
+    font-family: serif;
+    text-transform: uppercase;
+}
+#add{
+    padding-top: 10%;
+}
+#text2{
+    color: black;
+    text-decoration: underline ;
+    text-transform: capitalize;
+    font-size: 80px;
+    text-align: center;         
+}
+#text3{
+    display: block;
+    font-size: 30px;
+    text-transform: capitalize;
+    color: black;
+    text-align: center;
+}
+  /* to mobile view*/
+@media(max-width:676px){
+    *{
+        padding: 1px 0px 0px 1px;
+    }
+label{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 35px;
+    
+}
+#nav{
+    z-index: 1;
+    position: fixed;
+}
+#nav ul{
+    box-shadow: 0px 3px 10px 0px rgb(238, 189, 130);
+    width: 50svh;
+    position: fixed;
+}
+.bar li{
+    display: none;
+    padding-top: 10px;
+}
+.bar li a{
+    font-size: 20px;
+    text-decoration: none;
+    font-family: serif;
+    color: rgb(27, 33, 199);
+    text-transform: uppercase;
+    transform: scaleX(100%);
+     
+}
+.bar li a:hover{
+    color: rgb(218, 10, 156);
+    transition: 1s;
+    scale: 1.2;
+    font-size: 25px;
+}
+.bt{
+    display: block;
+    position: absolute;
+    left: 60%;
+    top:-10px;
+    font-size: 45px;
+    cursor: pointer;
+}
+#check:checked ~ .bar li {
+    display: block;
+    
+}
+.back{
+    display: inline-block   ;
+    justify-content: center;
+    align-items: center;
+}
+#me{
+    display: flex;
+    height: 250px;
+    width: 300px;
+    border: 6px,solid,turquoise;
+    filter: drop-shadow(turquoise  8px 6px 15px );
+    border-radius: 20%;
+    margin-top: 150px;
+}
+.text{
+    background: linear-gradient(to right,rgb(6, 66, 177),rgb(255, 0, 208),rgb(136, 134, 224));
+    background-size: cover;
+    background-clip: text;
+    color: transparent; 
+    font-size: 35px;
+    padding-top: 10%;
+    padding-left: 5%;
+    text-transform: uppercase;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+#head{
+    display: inline;
+    text-transform: uppercase;
+    text-decoration: solid;
+    font-family:serif;
+    font-size: 45px;
+    text-decoration: underline ;
+}
+#about{
+    padding-top: 55px;
+}
+#about p{
+    display: inline-block;
+    padding: 10%;
+    font-size: 30px;
+    padding-top: 2%;
+}
+#skills{
+    padding-top: 20%;
+}
+#skill{
+    display: flex;
+    flex-direction: column;
+    padding-left: 15%;
+    margin-top: 15%;
+    width: 150px;
+    height: 150px; 
+}
+.note{
+    display: flex;
+    padding-top: 100%;
+    font-size: 35px;
+    text-transform: capitalize;
+}
+#contact{
+     display: inline-block;
+     margin-top: 60%;
+     width: 48vh;
+    
+}
+.link{
+    display: flex;
+    flex-direction: column;
+    gap: 10%;
+    width: 40vh;
+    height: max-content;
+    align-items: center;
+}
+#link  li {
+    display:flex;
+} 
+#link li a{
+    color: black;
+    padding: 5%;
+    font-size: 80px;
+    text-decoration: none;
+    list-style: none;
+}  
+.fa-instagram:hover{
+    color: rgb(227, 27, 187);
+}
+.fa-instagram:hover::after{
+    display: none;
+}
+.fa-telegram:hover{
+    color: rgb(28, 43, 206);
+}
+.fa-telegram:hover::after{
+    display: none;
+}
+.fa-github:hover{
+    color: grey;
+}
+.fa-github:hover::after{
+    display: none;
+}
+.fa-linkedin:hover{
+    color: rgb(57, 27, 231);
+}
+.fa-linkedin:hover::after{
+    display: none;
+}
+.fa-user-tie:hover{
+    color: rgb(18, 240, 44);
+}
+.fa-user-tie:hover::after{
+   display: none;
+}
+#add{
+    padding: 10%;
+}
+#text2{
+    color: black;
+    text-decoration: underline ;
+    text-transform: capitalize;
+    font-size: 30px;
+    text-align: center;         
+}
+#text3{
+    display: block;
+    font-size: 15px;
+    text-transform: capitalize;
+    color: black;
+    text-align: center;
+}
+}
