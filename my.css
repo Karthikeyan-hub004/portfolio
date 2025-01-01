@@ -245,7 +245,7 @@ label{
 #me{
     display: flex;
     height: 250px;
-    width: 300px;
+    width: 200px;
     border: 6px,solid,turquoise;
     filter: drop-shadow(turquoise  8px 6px 15px );
     border-radius: 20%;
