@@ -1,33 +1,31 @@
 :root {
-    --bg-color: #f4f4f9;
-    --text-color: #333;
     --primary-color: #007bff;
     --secondary-color: #6c757d;
-    --accent-color: #ff6f61;
-    --highlight-color: #40e0d0;
-    --nav-bg: rgba(255, 255, 255, 0.85);
-    --section-bg: #ffffff;
-    --contact-bg: #e9ecef;
-    --shadow-color: rgba(0,0,0,0.05);
-    --accent-shadow-color: rgba(255,111,97,0.1);
-    --highlight-shadow-color: rgba(64,224,208,0.15);
+    --background-color: #ffffff;
+    --section-bg-color: #f8f9fa;
+    --text-color: #343a40;
+    --heading-color: #000000;
     --border-color: #dee2e6;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --gradient: linear-gradient(90deg, #007bff, #6f42c1, #d9534f);
 }
 
-body[data-theme="dark"] {
-    --bg-color: #121212;
+body.dark-mode {
+    --primary-color: #1f6feb;
+    --secondary-color: #a9a9a9;
+    --background-color: #121212;
+    --section-bg-color: #1e1e1e;
     --text-color: #e0e0e0;
-    --primary-color: #4dabf7;
-    --secondary-color: #adb5bd;
-    --accent-color: #ff8c82;
-    --highlight-color: #50e8d8;
-    --nav-bg: rgba(24, 24, 24, 0.85);
-    --section-bg: #1e1e1e;
-    --contact-bg: #2c2c2c;
-    --shadow-color: rgba(0,0,0,0.25);
-    --accent-shadow-color: rgba(255,140,130,0.15);
-    --highlight-shadow-color: rgba(80,232,216,0.2);
-    --border-color: #495057;
+    --heading-color: #ffffff;
+    --border-color: #444;
+    --shadow-color: rgba(255, 255, 255, 0.1);
+    --gradient: linear-gradient(90deg, #1f6feb, #8a63d2, #e06c68);
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
 }
 
 /* Professional Portfolio CSS */
@@ -36,28 +34,12 @@ body[data-theme="dark"] {
     padding: 0;
     box-sizing: border-box;
     font-family: 'Segoe UI', 'Arial', sans-serif;
-    scroll-behavior: smooth;
 }
-
-body {
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    opacity: 0;
-    animation: fadeIn 1s ease-in forwards;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-@keyframes fadeIn {
-    to {
-        opacity: 1;
-    }
-}
-
 label {
     font-size: 48px;
     font-weight: bold;
     letter-spacing: 2px;
-    color: var(--primary-color);
+    color: var(--heading-color);
     font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
 }
 #nav {
@@ -66,10 +48,8 @@ label {
     top: 0;
     left: 0;
     z-index: 10;
-    background: var(--nav-bg);
-    backdrop-filter: blur(10px);
+    background: var(--background-color);
     box-shadow: 0 2px 16px 0 var(--shadow-color);
-    transition: top 0.3s, background-color 0.3s;
 }
 #nav ul {
     display: flex;
@@ -92,15 +72,15 @@ label {
     font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
     text-transform: uppercase;
     font-weight: 500;
-    transition: color 0.3s, background-color 0.3s, transform 0.3s;
+    transition: color 0.3s, transform 0.3s;
     padding: 0.5rem 0.8rem;
     border-radius: 6px;
 }
 .bar li a:hover {
-    color: var(--accent-color);
-    background: var(--section-bg);
-    transform: translateY(-5px) scale(1.08);
-    box-shadow: 0 4px 12px 0 var(--accent-shadow-color);
+    color: var(--primary-color);
+    background: var(--section-bg-color);
+    transform: scale(1.08);
+    box-shadow: 0 2px 8px 0 var(--shadow-color);
 }
 .bt {
     display: none;
@@ -114,26 +94,12 @@ label {
     margin: 80px auto 0 auto;
     height: 320px;
     width: 320px;
-    border: 6px solid var(--highlight-color);
-    filter: drop-shadow(0 0 24px var(--highlight-color));
+    border: 6px solid var(--primary-color);
+    filter: drop-shadow(0 0 24px var(--primary-color));
     border-radius: 50%;
     object-fit: cover;
-    box-shadow: 0 8px 32px 0 var(--highlight-shadow-color);
-    animation: popIn 1s 0.2s ease-out forwards;
-    opacity: 0;
+    box-shadow: 0 8px 32px 0 var(--shadow-color);
 }
-
-@keyframes popIn {
-    0% {
-        opacity: 0;
-        transform: scale(0.8);
-    }
-    100% {
-        opacity: 1;
-        transform: scale(1);
-    }
-}
-
 .back {
     display: flex;
     justify-content: center;
@@ -141,7 +107,7 @@ label {
     padding-top: 8%;
 }
 .text {
-    background: linear-gradient(90deg, var(--highlight-color), var(--accent-color), #8886e0);
+    background: var(--gradient);
     background-clip: text;
     -webkit-background-clip: text;
     color: transparent;
@@ -150,8 +116,6 @@ label {
     padding-left: 40px;
     text-transform: uppercase;
     letter-spacing: 1.5px;
-    animation: slideIn 1s 0.5s ease-out forwards;
-    opacity: 0;
 }
 #head {
     display: block;
@@ -159,47 +123,22 @@ label {
     font-family: 'Montserrat', serif;
     font-size: 64px;
     padding-top: 8%;
-    color: var(--text-color);
+    color: var(--heading-color);
     letter-spacing: 2px;
     font-weight: 800;
-    opacity: 0;
 }
-
-@keyframes slideIn {
-    0% {
-        opacity: 0;
-        transform: translateY(-20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.animated-section {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-.animated-section.is-visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
 #about {
     margin-top: 10%;
-    background-color: var(--section-bg);
+    background-color: var(--section-bg-color);
     border-radius: 24px;
     box-shadow: 0 4px 24px 0 var(--shadow-color);
     padding: 3% 0;
-    transition: background-color 0.3s;
 }
 #about p {
     display: block;
     padding: 2% 10%;
     font-size: 28px;
-    color: var(--secondary-color);
+    color: var(--text-color);
     line-height: 1.6;
 }
 #skill {
@@ -225,11 +164,10 @@ label {
 }
 #contact {
     margin-top: 12%;
-    background-color: var(--contact-bg);
+    background-color: var(--section-bg-color);
     border-radius: 24px;
     box-shadow: 0 4px 24px 0 var(--shadow-color);
     padding: 3% 0;
-    transition: background-color 0.3s;
 }
 .link {
     display: flex;
@@ -252,30 +190,30 @@ label {
     transition: background 0.3s, color 0.3s, transform 0.3s;
 }
 #link li a:hover {
-    background: var(--section-bg);
-    color: var(--accent-color);
-    transform: scale(1.12) rotate(5deg);
+    background: var(--section-bg-color);
+    color: var(--primary-color);
+    transform: scale(1.12);
 }
 .fa-instagram:hover {
-    color: #e31bbb;
+    color: #e1306c;
 }
 .fa-telegram:hover {
-    color: #1c2bce;
+    color: #0088cc;
 }
 .fa-github:hover {
-    color: var(--secondary-color);
+    color: var(--heading-color);
 }
 .fa-linkedin:hover {
-    color: #391be7;
+    color: #0077b5;
 }
 .fa-user-tie:hover {
-    color: #12f02c;
+    color: #28a745;
 }
 #add {
     padding-top: 8%;
 }
 #text2 {
-    color: var(--text-color);
+    color: var(--heading-color);
     text-decoration: underline;
     text-transform: capitalize;
     font-size: 48px;
@@ -291,63 +229,68 @@ label {
     margin-bottom: 2rem;
 }
 
-/* Theme-toggle button */
+/* Theme Switcher */
 .theme-switch-wrapper {
+    position: fixed;
+    top: 1.5rem;
+    right: 1.5rem;
+    z-index: 20;
     display: flex;
     align-items: center;
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 20;
 }
-
 .theme-switch {
-    display: inline-block;
-    height: 34px;
     position: relative;
+    display: inline-block;
     width: 60px;
+    height: 34px;
 }
-
 .theme-switch input {
-    display:none;
+    opacity: 0;
+    width: 0;
+    height: 0;
 }
-
 .slider {
-    background-color: #ccc;
-    bottom: 0;
-    cursor: pointer;
-    left: 0;
     position: absolute;
-    right: 0;
+    cursor: pointer;
     top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #f6c343;
     transition: .4s;
+    border-radius: 34px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
-
+.slider .fa-sun {
+    color: #fff;
+    font-size: 16px;
+}
+.slider .fa-moon {
+    color: #fff;
+    font-size: 16px;
+}
 .slider:before {
-    background-color: #fff;
-    bottom: 4px;
+    position: absolute;
     content: "";
     height: 26px;
-    left: 4px;
-    position: absolute;
-    transition: .4s;
     width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+    z-index: 1;
 }
-
 input:checked + .slider {
-    background-color: var(--primary-color);
+    background-color: #365c7d;
 }
-
 input:checked + .slider:before {
     transform: translateX(26px);
 }
-
-.slider.round {
-    border-radius: 34px;
-}
-
-.slider.round:before {
-    border-radius: 50%;
+.theme-switch:hover .slider:before {
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
 /* Responsive Design */
@@ -392,7 +335,6 @@ input:checked + .slider:before {
     #nav ul {
         flex-direction: column;
         padding: 0.5rem 0;
-        background-color: var(--nav-bg);
     }
     .bar li {
         margin: 0.5rem 0;
@@ -400,11 +342,9 @@ input:checked + .slider:before {
     .bt {
         display: block;
         position: absolute;
-        right: 1rem;
-        top: 0.8rem;
-        font-size: 28px;
-        z-index: 11;
-        color: var(--text-color);
+        right: 2rem;
+        top: 0.5rem;
+        font-size: 32px;
     }
     .bar li {
         display: none;
@@ -415,7 +355,7 @@ input:checked + .slider:before {
     #me {
         height: 120px;
         width: 120px;
-        margin-top: 80px;
+        margin-top: 60px;
     }
     .text {
         font-size: 18px;
@@ -427,7 +367,7 @@ input:checked + .slider:before {
     }
     #about p {
         font-size: 14px;
-        padding: 4% 6%;
+        padding: 2% 4%;
     }
     #skills {
         padding-top: 12%;
@@ -446,16 +386,14 @@ input:checked + .slider:before {
     }
     #contact {
         margin-top: 24%;
-        width: 100%;
-        border-radius: 0;
-        padding: 4% 0;
+        width: 100vw;
+        padding: 2% 0;
     }
     .link {
         flex-direction: column;
         gap: 1rem;
-        width: 100%;
-        justify-content: center;
-        flex-wrap: wrap;
+        width: 100vw;
+        align-items: center;
     }
     #link li a {
         font-size: 32px;
@@ -469,9 +407,5 @@ input:checked + .slider:before {
     }
     #text3 {
         font-size: 12px;
-    }
-    .theme-switch-wrapper {
-        top: 15px;
-        right: 50px;
     }
 }
