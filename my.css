@@ -264,14 +264,28 @@ body {
     line-height: 1.6;
 }
 #skill {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 3rem;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    margin: 0 auto;
-    padding: 2rem 0;
+    width: 90%;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 2rem;
+}
+
+#skill img {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 1.5rem;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 #skills {
     padding-top: 8%;
@@ -285,53 +299,53 @@ body {
     margin-right: 2rem;
 }
 #contact {
-    margin-top: 12%;
-    background: rgba(var(--section-bg-color-rgb), 0.7);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    border-radius: 24px;
+    margin: 12% auto;
+    background: rgba(var(--section-bg-color-rgb), 0.8);
+    border-radius: 32px;
+    box-shadow: 0 8px 32px 0 var(--shadow-color);
+    padding: 5% 0;
+    max-width: 1400px;
+    width: 90%;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
-    padding: 4% 0;
-    transform: translateY(0);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-#contact:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.15);
 }
 
 .link {
     display: flex;
     flex-direction: row;
-    gap: 3rem;
+    gap: 6rem;
     justify-content: center;
     align-items: center;
-    padding: 2rem 0;
+    padding: 4rem 2rem;
     flex-wrap: wrap;
 }
-#link li {
-    display: flex;
-    align-items: center;
-}
+
 #link li a {
-    color: var(--text-color);
-    padding: 1rem;
-    font-size: 42px;
-    text-decoration: none;
-    border-radius: 12px;
-    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    font-size: 3.5rem;
+    padding: 1.5rem;
     background: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
     border: 1px solid rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(4px);
-    -webkit-backdrop-filter: blur(4px);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 #link li a:hover {
-    transform: translateY(-5px) scale(1.05);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(-10px) scale(1.1);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
     background: rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 768px) {
+    .link {
+        gap: 4rem;
+        padding: 3rem 1rem;
+    }
+    
+    #link li a {
+        font-size: 2.5rem;
+        padding: 1rem;
+    }
 }
 .fa-instagram:hover {
     color: #e1306c;
