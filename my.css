@@ -357,11 +357,22 @@ body {
     position: relative;
 }
 
+#link {
+    list-style: none;
+    display: flex;
+    gap: 4rem;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
 #link li {
     position: relative;
     animation: floatUp 0.6s ease-out forwards;
     opacity: 0;
     transform: translateY(30px);
+    display: flex;
+    align-items: center;
 }
 
 #link li:nth-child(1) { animation-delay: 0.1s; }
