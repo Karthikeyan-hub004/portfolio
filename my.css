@@ -162,29 +162,43 @@ body {
 .bar {
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: 3rem;
+    margin-right: 2rem;
 }
 .bar li {
     display: inline-block;
-    list-style: none;
     position: relative;
+    padding: 0.5rem 0;
 }
 .bar li a {
-    font-size: 22px;
+    font-size: 18px;
     text-decoration: none;
     color: var(--text-color);
     font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
     text-transform: uppercase;
-    font-weight: 500;
-    transition: color 0.3s, transform 0.3s;
-    padding: 0.5rem 0.8rem;
-    border-radius: 6px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    padding: 0.5rem 0;
+    position: relative;
 }
+.bar li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    transition: width 0.3s ease;
+}
+
 .bar li a:hover {
     color: var(--primary-color);
-    background: var(--section-bg-color);
-    transform: scale(1.08);
-    box-shadow: 0 2px 8px 0 var(--shadow-color);
+}
+
+.bar li a:hover::after {
+    width: 100%;
 }
 .bt {
     display: none;
