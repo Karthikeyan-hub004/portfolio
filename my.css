@@ -1,370 +1,316 @@
-*{
+/* Professional Portfolio CSS */
+* {
+    margin: 0;
     padding: 0;
-    margin:0;
-  }
-  label{
-      font-size: 60px;
-      font-family: 'Franklin , 'Arial 'Narrow', Arial, sans-serif;
-  }
-  #nav{
-      display: contents;
-  }
-  #nav ul{
-      box-shadow: 4px 7px 10px 0px rgb(238, 189, 130);
-       position: fixed;
-      width: 100%;
-      z-index: 1;
-      background-color: #EDDFE0;
-  }
-  .bar li {
-      display: inline-flex;
-      flex-direction: column;
-      position: relative;
-      left: 20%;
-      padding-left:20px;
-      list-style: none;
-  }
-  .bar  li a{
-      font-size: 40px;
-      text-decoration: none;
-      font-family: serif;
-      text-transform: uppercase;
-  }
-  .bar li a:hover{
-      color: coral;
-      transition: 1.5s;
-      scale: 1.1;
-  }
-  .bt{
-      display: none;
-      cursor: pointer;
-  }
-  #check{
-    display: none;
-  }
-  #me{
-    top: 20%;
-    left: 15%;
-    height: 400px;
-    width: 400px;
-    border: 6px,solid,turquoise;
-    filter: drop-shadow(turquoise  8px 0px 15px );
-    border-radius: 50%;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', 'Arial', sans-serif;
 }
-.back{
+label {
+    font-size: 48px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: #22223b;
+    font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+}
+#nav {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background: rgba(255,255,255,0.95);
+    box-shadow: 0 2px 16px 0 rgba(0,0,0,0.07);
+}
+#nav ul {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 10%;    
+    padding: 1rem 0;
+    background: transparent;
+    box-shadow: none;
 }
-.text{
-    background: linear-gradient(to right,turquoise,rgb(255, 0, 208),rgb(136, 134, 224));
-    background-size: cover;
-    background-clip: text;
-    color: transparent; 
-    font-size: 50px;
-    padding-left: 80px;
-    text-transform: uppercase;
-    
-}
-#head{
-    display: block;
-    text-transform: uppercase;
-    text-decoration: solid;
-    font-family:serif;
-    font-size: 80px;
-    padding-top: 10%;
-}
-#about{
-    margin-top: 15%;
-    background-color: #B7B7B7;
-}
-#about p{
+.bar li {
     display: inline-block;
-    padding: 10%;
-    font-size: 40px;
-    padding-top: 2%;
-     
-}
-#skill{
-    display: flex;
-    width: 250px;
-    height: 250px; 
-    
-
-}
-#skills{
-       padding-top: 10%;
-}
-.note{
-    float: right;
-    font-size: 35px;
-    text-transform: capitalize;
-}
-#contact{
-    margin-top: 20%;
-    background-color: #F6EACB;
-    
-}
-.link{
-    display: flex;
-    flex-direction: row;
-    gap: 10%;
-    justify-content: center;
-}
-#link  li {
-    display:flex;
-} 
-#link li a{
-    color: black;
-    padding: 5%;
-    font-size: 80px;
-    text-decoration: none;
+    margin: 0 1.5rem;
     list-style: none;
-}  
-.fa-instagram:hover{
-    color: rgb(227, 27, 187);
+    position: relative;
 }
-.fa-instagram:hover::after{
-    content: "insta";
-    color: rgb(227, 27, 187);
-    font-size: 40px;
-    font-family: serif;
-    text-transform: uppercase;
-}
-.fa-telegram:hover{
-    color: rgb(28, 43, 206);
-}
-.fa-telegram:hover::after{
-    content: "telegram";
-    color: rgb(44, 14, 241);
-    font-size: 40px;
-    font-family: serif;
-    text-transform: uppercase;
-}
-.fa-github:hover{
-    color: rgb(16, 15, 15);
-}
-.fa-github:hover::after{
-    content: "github";
-    color: rgb(22, 21, 26);
-    font-size: 40px;
-    font-family: serif;
-    text-transform: uppercase;
-}
-.fa-linkedin:hover{
-    color: rgb(57, 27, 231);
-}
-.fa-linkedin:hover::after{
-    content: "linkedin";
-    font-size: 40px;
-    font-family: serif;
-    text-transform: uppercase;
-}
-.fa-user-tie:hover{
-    color: rgb(18, 240, 44);
-}
-.fa-user-tie:hover::after{
-    content: "resume";
-    font-size: 40px;
-    font-family: serif;
-    text-transform: uppercase;
-}
-#add{
-    padding-top: 10%;
-}
-#text2{
-    color: black;
-    text-decoration: underline ;
-    text-transform: capitalize;
-    font-size: 80px;
-    text-align: center;         
-}
-#text3{
-    display: block;
-    font-size: 30px;
-    text-transform: capitalize;
-    color: black;
-    text-align: center;
-}
-  /* to mobile view*/
-@media(max-width:676px){
-    *{
-        padding: 1px 0px 0px 1px;
-    }
-label{
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    font-size: 35px;
-    
-}
-#nav{
-    z-index: 1;
-    position: fixed;
-}
-#nav ul{
-    box-shadow: 0px 3px 10px 0px rgb(238, 189, 130);
-    width: 50svh;
-    position: fixed;
-}
-.bar li{
-    display: none;
-    padding-top: 10px;
-}
-.bar li a{
-    font-size: 20px;
+.bar li a {
+    font-size: 22px;
     text-decoration: none;
-    font-family: serif;
-    color: rgb(27, 33, 199);
+    color: #22223b;
+    font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
     text-transform: uppercase;
-    transform: scaleX(100%);
-     
+    font-weight: 500;
+    transition: color 0.3s, transform 0.3s;
+    padding: 0.5rem 0.8rem;
+    border-radius: 6px;
 }
-.bar li a:hover{
-    color: rgb(218, 10, 156);
-    transition: 1s;
-    scale: 1.2;
-    font-size: 25px;
+.bar li a:hover {
+    color: #ff6f61;
+    background: #f7f7f7;
+    transform: scale(1.08);
+    box-shadow: 0 2px 8px 0 rgba(255,111,97,0.08);
 }
-.bt{
-    display: block;
-    position: absolute;
-    left: 60%;
-    top:-10px;
-    font-size: 45px;
+.bt {
+    display: none;
     cursor: pointer;
 }
-#check:checked ~ .bar li {
-    display: block;
-    
+#check {
+    display: none;
 }
-.back{
-    display: inline-block   ;
+#me {
+    display: block;
+    margin: 80px auto 0 auto;
+    height: 320px;
+    width: 320px;
+    border: 6px solid #40e0d0;
+    filter: drop-shadow(0 0 24px #40e0d0);
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 8px 32px 0 rgba(64,224,208,0.15);
+}
+.back {
+    display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 8%;
 }
-#me{
-    display: flex;
-    height: 250px;
-    width: 250px;
-    border: 6px,solid,turquoise;
-    filter: drop-shadow(turquoise  8px 6px 15px );
-    border-radius: 20%;
-    margin-top: 150px;
-}
-.text{
-    background: linear-gradient(to right,rgb(6, 66, 177),rgb(255, 0, 208),rgb(136, 134, 224));
-    background-size: cover;
+.text {
+    background: linear-gradient(90deg, #40e0d0, #ff00d0, #8886e0);
     background-clip: text;
-    color: transparent; 
-    font-size: 35px;
-    padding-top: 10%;
-    padding-left: 5%;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-size: 40px;
+    font-weight: 700;
+    padding-left: 40px;
     text-transform: uppercase;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    letter-spacing: 1.5px;
 }
-#head{
-    display: inline;
-    text-transform: uppercase;
-    text-decoration: solid;
-    font-family:serif;
-    font-size: 45px;
-    text-decoration: underline ;
-}
-#about{
-    padding-top: 55px;
-}
-#about p{
-    display: inline-block;
-    padding: 10%;
-    font-size: 30px;
-    padding-top: 2%;
-}
-#skills{
-    padding-top: 20%;
-}
-#skill{
-    display: flex;
-    flex-direction: column;
-    padding-left: 15%;
-    margin-top: 15%;
-    width: 150px;
-    height: 150px; 
-}
-.note{
-    display: flex;
-    padding-top: 100%;
-    font-size: 35px;
-    text-transform: capitalize;
-}
-#contact{
-     display: inline-block;
-     margin-top: 60%;
-     width: 48vh;
-    
-}
-.link{
-    display: flex;
-    flex-direction: column;
-    gap: 10%;
-    width: 40vh;
-    height: max-content;
-    align-items: center;
-}
-#link  li {
-    display:flex;
-} 
-#link li a{
-    color: black;
-    padding: 5%;
-    font-size: 80px;
-    text-decoration: none;
-    list-style: none;
-}  
-.fa-instagram:hover{
-    color: rgb(227, 27, 187);
-}
-.fa-instagram:hover::after{
-    display: none;
-}
-.fa-telegram:hover{
-    color: rgb(28, 43, 206);
-}
-.fa-telegram:hover::after{
-    display: none;
-}
-.fa-github:hover{
-    color: grey;
-}
-.fa-github:hover::after{
-    display: none;
-}
-.fa-linkedin:hover{
-    color: rgb(57, 27, 231);
-}
-.fa-linkedin:hover::after{
-    display: none;
-}
-.fa-user-tie:hover{
-    color: rgb(18, 240, 44);
-}
-.fa-user-tie:hover::after{
-   display: none;
-}
-#add{
-    padding: 10%;
-}
-#text2{
-    color: black;
-    text-decoration: underline ;
-    text-transform: capitalize;
-    font-size: 30px;
-    text-align: center;         
-}
-#text3{
+#head {
     display: block;
-    font-size: 15px;
-    text-transform: capitalize;
-    color: black;
+    text-transform: uppercase;
+    font-family: 'Montserrat', serif;
+    font-size: 64px;
+    padding-top: 8%;
+    color: #22223b;
+    letter-spacing: 2px;
+    font-weight: 800;
+}
+#about {
+    margin-top: 10%;
+    background-color: #f7f7f7;
+    border-radius: 24px;
+    box-shadow: 0 4px 24px 0 rgba(0,0,0,0.04);
+    padding: 3% 0;
+}
+#about p {
+    display: block;
+    padding: 2% 10%;
+    font-size: 28px;
+    color: #22223b;
+    line-height: 1.6;
+}
+#skill {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 2rem 0;
+}
+#skills {
+    padding-top: 8%;
     text-align: center;
 }
+.note {
+    float: right;
+    font-size: 24px;
+    color: #4a4e69;
+    text-transform: capitalize;
+    margin-right: 2rem;
+}
+#contact {
+    margin-top: 12%;
+    background-color: #f6eacb;
+    border-radius: 24px;
+    box-shadow: 0 4px 24px 0 rgba(0,0,0,0.04);
+    padding: 3% 0;
+}
+.link {
+    display: flex;
+    flex-direction: row;
+    gap: 4rem;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+}
+#link li {
+    display: flex;
+    align-items: center;
+}
+#link li a {
+    color: #22223b;
+    padding: 0.5rem 1rem;
+    font-size: 48px;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: background 0.3s, color 0.3s, transform 0.3s;
+}
+#link li a:hover {
+    background: #f7f7f7;
+    color: #ff6f61;
+    transform: scale(1.12);
+}
+.fa-instagram:hover {
+    color: #e31bbb;
+}
+.fa-telegram:hover {
+    color: #1c2bce;
+}
+.fa-github:hover {
+    color: #22223b;
+}
+.fa-linkedin:hover {
+    color: #391be7;
+}
+.fa-user-tie:hover {
+    color: #12f02c;
+}
+#add {
+    padding-top: 8%;
+}
+#text2 {
+    color: #22223b;
+    text-decoration: underline;
+    text-transform: capitalize;
+    font-size: 48px;
+    text-align: center;
+    font-weight: 700;
+}
+#text3 {
+    display: block;
+    font-size: 22px;
+    text-transform: capitalize;
+    color: #4a4e69;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+/* Responsive Design */
+@media (max-width: 900px) {
+    #nav ul {
+        flex-direction: column;
+        padding: 0.5rem 0;
+    }
+    .bar li {
+        margin: 0.5rem 0;
+    }
+    .link {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    #me {
+        height: 220px;
+        width: 220px;
+    }
+    #head {
+        font-size: 40px;
+    }
+    .text {
+        font-size: 28px;
+        padding-left: 0;
+    }
+    #about p {
+        font-size: 20px;
+        padding: 4% 6%;
+    }
+    #text2 {
+        font-size: 32px;
+    }
+    #text3 {
+        font-size: 16px;
+    }
+}
+@media (max-width: 600px) {
+    label {
+        font-size: 28px;
+    }
+    #nav ul {
+        flex-direction: column;
+        padding: 0.5rem 0;
+    }
+    .bar li {
+        margin: 0.5rem 0;
+    }
+    .bt {
+        display: block;
+        position: absolute;
+        right: 2rem;
+        top: 0.5rem;
+        font-size: 32px;
+    }
+    .bar li {
+        display: none;
+    }
+    #check:checked ~ .bar li {
+        display: block;
+    }
+    #me {
+        height: 120px;
+        width: 120px;
+        margin-top: 60px;
+    }
+    .text {
+        font-size: 18px;
+        padding-left: 0;
+    }
+    #head {
+        font-size: 24px;
+        padding-top: 4%;
+    }
+    #about p {
+        font-size: 14px;
+        padding: 2% 4%;
+    }
+    #skills {
+        padding-top: 12%;
+    }
+    #skill {
+        flex-direction: column;
+        gap: 1rem;
+        width: 100%;
+        height: auto;
+        padding-left: 0;
+        margin-top: 8%;
+    }
+    .note {
+        font-size: 16px;
+        margin-right: 0.5rem;
+    }
+    #contact {
+        margin-top: 24%;
+        width: 100vw;
+        padding: 2% 0;
+    }
+    .link {
+        flex-direction: column;
+        gap: 1rem;
+        width: 100vw;
+        align-items: center;
+    }
+    #link li a {
+        font-size: 32px;
+        padding: 0.5rem 0.8rem;
+    }
+    #add {
+        padding: 4%;
+    }
+    #text2 {
+        font-size: 18px;
+    }
+    #text3 {
+        font-size: 12px;
+    }
 }
