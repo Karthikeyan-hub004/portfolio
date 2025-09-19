@@ -10,19 +10,32 @@
 </head>
 <body>
     <script src="my.js"></script>
-    <div id="nav" ><ul>
-    <label for="title">portfolio</label>
-    <input type="checkbox" id="check">
-    <label for="check" class="bt">&#9776;</label>
-    <span class="bar">
-    <li><a href="#">home</a></li>
-    <li><a href="#about">about me</a></li>
-    <li><a href="#skills">skills</a></li>
-    <li><a href="#contact">contacts</a></li>
-    <li><a href="#add">others</a></li></span>
-   
-</ul>
-</div> 
+    <nav id="nav">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <h1>Portfolio</h1>
+            </div>
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch" for="checkbox">
+                    <input type="checkbox" id="checkbox" />
+                    <div class="slider round">
+                        <i class="fas fa-sun"></i>
+                        <i class="fas fa-moon"></i>
+                    </div>
+                </label>
+            </div>
+            <button class="nav-toggle" aria-label="toggle navigation">
+                <span class="hamburger"></span>
+            </button>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#add">More</a></li>
+            </ul>
+        </div>
+    </nav>
 <div class="back">
     <img src="me.jpg" alt="I'm Karthikeyan." id="me" >
     <h1 class="text" >hello,i'm Karthikeyan.A<br>welcome to my website.</h1></div>

@@ -47,26 +47,37 @@ label {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 10;
+    z-index: 1000;
     background: var(--background-color);
     box-shadow: 0 2px 16px 0 var(--shadow-color);
 }
-#nav ul {
+
+.nav-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
-    background: transparent;
-    box-shadow: none;
+    padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
 }
-.bar {
+
+.nav-brand h1 {
+    font-size: 1.5rem;
+    color: var(--heading-color);
+    margin: 0;
+}
+
+.nav-menu {
     display: flex;
     align-items: center;
     gap: 2rem;
-}
-.bar li {
-    display: inline-block;
+    margin: 0;
+    padding: 0;
     list-style: none;
+}
+
+.nav-menu li {
     position: relative;
 }
 .bar li a {
@@ -298,36 +309,95 @@ input:checked + .slider:before {
 }
 
 /* Responsive Design */
+.nav-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+}
+
+.hamburger {
+    display: block;
+    position: relative;
+    width: 2rem;
+    height: 3px;
+    background: var(--text-color);
+    transition: all 0.3s ease-in-out;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    position: absolute;
+    width: 2rem;
+    height: 3px;
+    background: var(--text-color);
+    transition: all 0.3s ease-in-out;
+}
+
+.hamburger::before {
+    transform: translateY(-8px);
+}
+
+.hamburger::after {
+    transform: translateY(8px);
+}
+
 @media (max-width: 900px) {
-    #nav ul {
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--background-color);
         flex-direction: column;
-        padding: 0.5rem 0;
+        align-items: center;
+        padding: 1rem 0;
+        gap: 1rem;
+        transform: translateY(-100%);
+        opacity: 0;
+        pointer-events: none;
+        transition: all 0.3s ease-in-out;
     }
-    .bar li {
-        margin: 0.5rem 0;
+
+    .nav-menu.show {
+        transform: translateY(0);
+        opacity: 1;
+        pointer-events: auto;
     }
-    .link {
-        flex-direction: column;
-        gap: 2rem;
+
+    .nav-menu li a {
+        font-size: 1.2rem;
     }
+
     #me {
         height: 220px;
         width: 220px;
     }
+
     #head {
         font-size: 40px;
     }
+
     .text {
         font-size: 28px;
         padding-left: 0;
     }
+
     #about p {
         font-size: 20px;
         padding: 4% 6%;
     }
+
     #text2 {
         font-size: 32px;
     }
+
     #text3 {
         font-size: 16px;
     }
