@@ -53,15 +53,19 @@ label {
 }
 #nav ul {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
-    padding: 1rem 0;
+    padding: 1rem 2rem;
     background: transparent;
     box-shadow: none;
 }
+.bar {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
 .bar li {
     display: inline-block;
-    margin: 0 1.5rem;
     list-style: none;
     position: relative;
 }
@@ -91,7 +95,7 @@ label {
 }
 #me {
     display: block;
-    margin: 80px auto 0 auto;
+    margin: 0;
     height: 320px;
     width: 320px;
     border: 6px solid var(--primary-color);
@@ -104,7 +108,9 @@ label {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 8%;
+    gap: 4rem;
+    padding: 120px 2rem 0;
+    min-height: 100vh;
 }
 .text {
     background: var(--gradient);
@@ -231,12 +237,10 @@ label {
 
 /* Theme Switcher */
 .theme-switch-wrapper {
-    position: fixed;
-    top: 1.5rem;
-    right: 1.5rem;
-    z-index: 20;
     display: flex;
     align-items: center;
+    margin-left: auto;
+    padding-left: 2rem;
 }
 .theme-switch {
     position: relative;
@@ -334,17 +338,21 @@ input:checked + .slider:before {
     }
     #nav ul {
         flex-direction: column;
-        padding: 0.5rem 0;
+        padding: 1rem;
+        align-items: flex-start;
     }
-    .bar li {
-        margin: 0.5rem 0;
+    .theme-switch-wrapper {
+        position: absolute;
+        top: 1rem;
+        right: 4rem;
+        padding: 0;
     }
     .bt {
         display: block;
         position: absolute;
-        right: 2rem;
-        top: 0.5rem;
-        font-size: 32px;
+        right: 1rem;
+        top: 1rem;
+        font-size: 28px;
     }
     .bar li {
         display: none;
