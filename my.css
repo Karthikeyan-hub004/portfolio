@@ -71,12 +71,13 @@ body {
     top: 0;
     left: 0;
     z-index: 100;
-    background: var(--background-color);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    box-shadow: 0 2px 16px 0 var(--shadow-color);
-    padding: 1rem;
-    transition: all 0.3s ease-in-out;
+    background: rgba(var(--background-color-rgb), 0.85);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 1.2rem 2rem;
+    transition: all 0.4s ease-in-out;
 }
 
 .navbar.scroll-down {
@@ -285,18 +286,30 @@ body {
 }
 #contact {
     margin-top: 12%;
-    background-color: var(--section-bg-color);
+    background: rgba(var(--section-bg-color-rgb), 0.7);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
     border-radius: 24px;
-    box-shadow: 0 4px 24px 0 var(--shadow-color);
-    padding: 3% 0;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.1);
+    padding: 4% 0;
+    transform: translateY(0);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+
+#contact:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px 0 rgba(0, 0, 0, 0.15);
+}
+
 .link {
     display: flex;
     flex-direction: row;
-    gap: 4rem;
+    gap: 3rem;
     justify-content: center;
     align-items: center;
     padding: 2rem 0;
+    flex-wrap: wrap;
 }
 #link li {
     display: flex;
@@ -304,16 +317,21 @@ body {
 }
 #link li a {
     color: var(--text-color);
-    padding: 0.5rem 1rem;
-    font-size: 48px;
+    padding: 1rem;
+    font-size: 42px;
     text-decoration: none;
-    border-radius: 8px;
-    transition: background 0.3s, color 0.3s, transform 0.3s;
+    border-radius: 12px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
 }
+
 #link li a:hover {
-    background: var(--section-bg-color);
-    color: var(--primary-color);
-    transform: scale(1.12);
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.1);
 }
 .fa-instagram:hover {
     color: #e1306c;
