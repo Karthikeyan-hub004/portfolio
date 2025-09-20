@@ -2197,6 +2197,8 @@ input:checked + .slider:before {
 @media (max-width: 991px) {
     .nav-toggle {
         display: block;
+        position: relative;
+        z-index: 101;
     }
     
     .nav-menu {
