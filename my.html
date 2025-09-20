@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta name="description" content="Karthikeyan - Web Developer Portfolio showcasing skills in HTML, CSS, JavaScript, and Python">
+    <title>Karthikeyan A - Web Developer</title>
+    <link rel="stylesheet" href="my.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar" id="nav">
+            <div class="nav-brand">
+                <h1>Portfolio</h1>
+            </div>
+            <button class="nav-toggle" aria-label="toggle navigation" id="navToggle">
+                <span class="hamburger"></span>
+            </button>
+            <div class="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
+                    <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
+                    <li class="nav-item"><a href="#certifications" class="nav-link">Certifications</a></li>
+                    <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
+                    <li class="nav-item"><a href="#add" class="nav-link">Others</a></li>
+                </ul>
+                <div class="theme-switch-wrapper">
+                    <label class="theme-switch" for="checkbox" aria-label="Toggle dark mode">
+                        <input type="checkbox" id="checkbox" />
+                        <div class="slider round">
+                            <i class="fas fa-sun" aria-hidden="true"></i>
+                            <i class="fas fa-moon" aria-hidden="true"></i>
+                        </div>
+                    </label>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-background">
+                <div class="floating-shapes">
+                    <div class="shape shape-1"></div>
+                    <div class="shape shape-2"></div>
+                    <div class="shape shape-3"></div>
+                    <div class="shape shape-4"></div>
+                    <div class="shape shape-5"></div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="profile-section animate-slide-in">
+                    <div class="profile-wrapper">
+                        <img src="me.jpg" alt="Karthikeyan" class="profile-img" id="me">
+                        <div class="profile-ring"></div>
+                        <div class="profile-glow"></div>
+                    </div>
+                </div>
+                <div class="hero-content animate-fade-up">
+                    <h1 class="greeting animate-typing">Hello, I'm</h1>
+                    <h2 class="name animate-glow">Karthikeyan.A</h2>
+                    <p class="tagline animate-fade-in">Welcome to my world</p>
+                    <div class="hero-buttons animate-bounce-in">
+                        <a href="KARTHIKEYAN.pdf" download="RESUME" class="btn btn-primary pulse-btn">
+                            <i class="fas fa-download"></i> Download CV
+                        </a>
+                        <a href="#contact" class="btn btn-secondary glow-btn">
+                            <i class="fas fa-envelope"></i> Contact Me
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section">
+            <div class="container">
+                <h2 class="section-title">About Me</h2>
+                <p>I am currently pursuing a Bachelor of Science in Computer Science at Muthayammal College of Arts and Science, with a strong passion for web development. My journey began with mastering the fundamentals of HTML and CSS, which laid the groundwork for building structured and visually appealing web pages. Having completed the basics of these essential technologies, I am now focused on learning JavaScript to create dynamic and interactive user experiences. As I expand my skill set into backend development and database management, I aim to become a versatile full-stack developer. Alongside my technical growth, I bring valuable soft skills such as leadership, adaptability, effective communication, and a problem-solving mindset that help me thrive in collaborative and fast-paced environments.</p>
+            </div>
+        </section>
+
+        <section id="skills" class="section">
+            <div class="container">
+                <h2 class="section-title">Skills</h2>
+                <div class="skills-grid">
+                    
+                    <img src="images.png" alt="HTML,CSS and JS" loading="lazy">
+                    <img src="react.js.png" alt="React.js - Frontend Library" loading="lazy">
+                    <img src="db.png" alt="Database Management - SQL and NoSQL" loading="lazy">
+                    <img src="python.jpg" alt="Python Programming Language - Backend Development" loading="lazy">
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section">
+            <div class="container">
+                <h2 class="section-title">Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card" data-project="1">
+                        <div class="project-image">
+                            <div class="project-overlay">
+                                <i class="fas fa-globe project-icon"></i>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Portfolio Website</h3>
+                            <p>A responsive personal portfolio website built with HTML, CSS, and JavaScript. Features dark/light theme toggle, smooth animations, and mobile-first design approach.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">HTML</span>
+                                <span class="tech-tag">CSS</span>
+                                <span class="tech-tag">JavaScript</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://myportfolio775.netlify.app/my.html" class="project-link" aria-label="View project demo">
+                                    <i class="fas fa-external-link-alt"></i> Demo
+                                </a>
+                                <a href="https://github.com/Karthikeyan-hub004/portfolio" class="project-link" aria-label="View project code">
+                                    <i class="fab fa-github"></i> Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-project="2">
+                        <div class="project-image">
+                            <div class="project-overlay">
+                                <i class="fas fa-gamepad project-icon"></i>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>GameVally</h3>
+                            <p>GameVally is a lightweight web-based gaming hub offering instant access to casual browser games. Designed for quick entertainment, it features a clean interface, fast loading, and a relaxing vibe—perfect for short breaks and stress relief.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">HTML</span>
+                                <span class="tech-tag">CSS</span>
+                                <span class="tech-tag">JavaScript</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://gamevally.netlify.app/games/main" class="project-link" aria-label="View project demo">
+                                    <i class="fas fa-external-link-alt"></i> Demo
+                                </a>
+                                <a href="https://github.com/Karthikeyan-hub004/GameVally.git" class="project-link" aria-label="View project code">
+                                    <i class="fab fa-github"></i> Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card" data-project="3">
+                        <div class="project-image">
+                            <div class="project-overlay">
+                                <i class="fas fa-qrcode project-icon"></i>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <h3>Generate QR</h3>
+                            <p>QRGenerated is a lightweight web app that lets users create QR codes instantly from any input. With a clean interface and fast performance, it’s perfect for quick sharing, linking, or digital access needs.</p>
+                            <div class="project-tech">
+                                <span class="tech-tag">REACT.JS</span>
+                                <span class="tech-tag">CSS</span>
+                                <span class="tech-tag">MONODB</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://qrgenrated.netlify.app/" class="project-link" aria-label="View project demo">
+                                    <i class="fas fa-external-link-alt"></i> Demo
+                                </a>
+                                <a href="https://github.com/Karthikeyan-hub004/QR_GEN.git" class="project-link" aria-label="View project code">
+                                    <i class="fab fa-github"></i> Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="certifications" class="section">
+            <div class="container">
+                <h2 class="section-title">Certifications</h2>
+                <div class="certifications-grid">
+                    <div class="certification-card" data-cert="1">
+                        <div class="cert-image">
+                            <img src="intern.png" alt="Web Design Certificate" class="certificate-img" loading="lazy">
+                            <div class="cert-overlay">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                        </div>
+                        <div class="cert-content">
+                            <h3>Internship</h3>
+                            <p>I Worked as a Web Developer Intern at Zaalima Development from(20/03/2025)to(20/06/2025) for three months. I collaborated with my team to build a E-commerce website to sell customize T-shirts and hoodies. I contributed to frontend development and database management.</p>
+                            <div class="cert-actions">
+                                <a href="intern.png" class="cert-link verify-btn" aria-label="View full certificate">
+                                    <i class="fas fa-external-link-alt"></i> View Certificate
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="certification-card" data-cert="2">
+                        <div class="cert-image">
+                            <img src="momodb.png" alt="JavaScript Fundamentals Certificate" class="certificate-img" loading="lazy">
+                            <div class="cert-overlay">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                        </div>
+                        <div class="cert-content">
+                            <h3>Database</h3>
+                            <p>The Database program focuses on database design, SQL queries, and data manipulation equips learners with essential skills to work with relational databases. Participants also learn to insert, update, and delete records, enforce constraints, and manage transactions. Completing the program demonstrates readiness for roles in data analysis, backend development, and database management.</p>
+                            <div class="cert-actions">
+                                <a href="momodb.png" class="cert-link verify-btn" aria-label="View full certificate">
+                                    <i class="fas fa-external-link-alt"></i> View Certificate
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="certification-card" data-cert="3">
+                        <div class="cert-image">
+                            <img src="nptl.png" alt="NPTL Certificate" class="certificate-img" loading="lazy">
+                            <div class="cert-overlay">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                        </div>
+                        <div class="cert-content">
+                            <h3>NPTL</h3>
+                            <p>I successfully completed the NPTEL course on "Fundamentals of IoT," earning a silver skill badge in recognition of my performance.The silver badge reflects my strong grasp of the subject and commitment to mastering emerging technologies that are shaping the future of connectivity and automation.</p><div class="cert-actions">
+                                <a href="nptl.png" class="cert-link verify-btn" aria-label="View full certificate">
+                                    <i class="fas fa-external-link-alt"></i> View Certificate
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact-section">
+            <div class="contact-background">
+                <div class="contact-particles">
+                    <div class="particle particle-1"></div>
+                    <div class="particle particle-2"></div>
+                    <div class="particle particle-3"></div>
+                    <div class="particle particle-4"></div>
+                    <div class="particle particle-5"></div>
+                    <div class="particle particle-6"></div>
+                </div>
+            </div>
+            
+            <div class="container">
+                <div class="contact-header animate-contact-header">
+                    <h2 class="contact-title">Let's Connect</h2>
+                    <p class="contact-subtitle">Big ideas deserve bold action. Let’s begin.</p>
+                    <div class="contact-title-decoration"></div>
+                </div>
+
+                <div class="contact-content">
+                    <!-- Social Links with Advanced Animations -->
+                    <div class="social-links-container animate-social-links">
+                        <h3 class="social-title">Follow Me</h3>
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/karthi-keyan-a-21834132a/" 
+                               target="_blank" rel="noopener noreferrer" 
+                               class="social-link linkedin" 
+                               aria-label="Connect with me on LinkedIn">
+                                <div class="social-icon">
+                                    <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+                                </div>
+                                <span class="social-label">LinkedIn</span>
+                                <div class="social-hover-effect"></div>
+                            </a>
+                            
+                            <a href="https://github.com/Karthikeyan-hub004" 
+                               target="_blank" rel="noopener noreferrer" 
+                               class="social-link github"
+                               aria-label="View my GitHub profile">
+                                <div class="social-icon">
+                                    <i class="fab fa-github" aria-hidden="true"></i>
+                                </div>
+                                <span class="social-label">GitHub</span>
+                                <div class="social-hover-effect"></div>
+                            </a>
+                            
+                            <a href="KARTHIKEYAN.pdf" download="RESUME" 
+                               class="social-link resume"
+                               aria-label="Download my resume (PDF)">
+                                <div class="social-icon">
+                                    <i class="fas fa-file-download" aria-hidden="true"></i>
+                                </div>
+                                <span class="social-label">Resume</span>
+                                <div class="social-hover-effect"></div>
+                            </a>
+                            
+                            <a href="https://www.instagram.com/invites/contact/?igsh=hp9evvpdwtuy&utm_content=rpdxsbn" 
+                               target="_blank" rel="noopener noreferrer" 
+                               class="social-link instagram"
+                               aria-label="Visit my Instagram profile">
+                                <div class="social-icon">
+                                    <i class="fab fa-instagram" aria-hidden="true"></i>
+                                </div>
+                                <span class="social-label">Instagram</span>
+                                <div class="social-hover-effect"></div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Contact Information Cards -->
+                    <div class="contact-info-grid animate-contact-info">
+                        <div class="contact-card location-card">
+                            <div class="card-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="card-content">
+                                <h4>Location</h4>
+                                <p>54/26b, NSK Street<br>Arunachalam main Road<br>Salem-636006, India</p>
+                            </div>
+                            <div class="card-glow"></div>
+                        </div>
+
+                        <div class="contact-card email-card">
+                            <div class="card-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="card-content">
+                                <h4>Email</h4>
+                                <a href="mailto:karthikeyankishore518@gmail.com" class="contact-link">
+                                    karthikeyankishore518@gmail.com
+                                </a>
+                            </div>
+                            <div class="card-glow"></div>
+                        </div>
+
+                        <div class="contact-card phone-card">
+                            <div class="card-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="card-content">
+                                <h4>Phone</h4>
+                                <a href="tel:+919943578591" class="contact-link">
+                                    +91 9943578591
+                                </a>
+                            </div>
+                            <div class="card-glow"></div>
+                        </div>
+                    </div>
+
+                    <!-- Call to Action -->
+                    <div class="contact-cta animate-cta">
+                        <div class="cta-content">
+                            <h3>Ready to collaborate?</h3>
+                            <p>Let's discuss your next project and create something amazing together!</p>
+                            <a href="mailto:karthikeyankishore518@gmail.com" class="cta-button">
+                                <i class="fas fa-paper-plane"></i>
+                                <span>Send Message</span>
+                                <div class="button-ripple"></div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="theme.js"></script>
+    <script src="nav.js"></script>
+    <script src="hero-animations.js"></script>
+    <script src="contact-animations.js"></script>
+</body>
+</html>
