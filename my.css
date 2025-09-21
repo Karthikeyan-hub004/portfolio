@@ -2198,7 +2198,7 @@ input:checked + .slider:before {
     .nav-toggle {
         display: block;
         position: relative;
-        z-index: 103; /* Higher than nav-menu for proper interaction */
+        z-index: 105; /* Highest z-index to always stay on top */
     }
     
     .nav-menu {
@@ -2212,12 +2212,12 @@ input:checked + .slider:before {
         transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         box-shadow: -5px 0 15px var(--shadow-color);
         border-left: 1px solid var(--border-color);
-        z-index: 102; /* Lower than nav-toggle but higher than content */
+        z-index: 102; /* Lower than nav-toggle */
     }
     
     .nav-menu.nav-active {
         right: 0;
-        z-index: 104; /* Highest when active to appear above toggle */
+        z-index: 102; /* Keep same z-index when active, lower than toggle */
     }
     
     .nav-menu.nav-active .nav-item {
