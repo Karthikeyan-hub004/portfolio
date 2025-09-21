@@ -2284,7 +2284,7 @@ input:checked + .slider:before {
     }
     
     .nav-list {
-        flex-direction: column;
+        flex-direction: row;
         gap: 1.5rem;
         flex-grow: 1;
     }
