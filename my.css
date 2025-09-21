@@ -389,8 +389,8 @@ body {
 }
 
 .nav-brand {
-    position: relative;
-    z-index: 106; /* Higher than toggle button to prevent overlap */
+    flex: 1;
+    z-index: 106; /* Higher than toggle to prevent overlap */
 }
 
 .nav-brand h1 {
@@ -416,7 +416,9 @@ body {
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     transform: scale(1);
     position: relative;
-    z-index: 105; /* Lower than nav-brand but higher than nav-menu */
+    z-index: 105;
+    flex-shrink: 0; /* Prevent toggle from shrinking */
+    margin-left: auto; /* Push toggle to the right */
 }
 
 .nav-toggle:hover {
@@ -2202,10 +2204,14 @@ input:checked + .slider:before {
 
 /* Mobile-specific styles */
 @media (max-width: 991px) {
+    .navbar {
+        padding: clamp(0.8rem, 2vw, 1rem) clamp(1rem, 4vw, 1.5rem);
+    }
+    
     .nav-toggle {
         display: block;
         position: relative;
-        z-index: 105; /* Lower than nav-brand */
+        z-index: 105;
     }
     
     .nav-menu {
@@ -2219,12 +2225,12 @@ input:checked + .slider:before {
         transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         box-shadow: -5px 0 15px var(--shadow-color);
         border-left: 1px solid var(--border-color);
-        z-index: 102; /* Lowest z-index */
+        z-index: 102;
     }
     
     .nav-menu.nav-active {
         right: 0;
-        z-index: 102; /* Keep same z-index when active */
+        z-index: 102;
     }
     
     .nav-menu.nav-active .nav-item {
