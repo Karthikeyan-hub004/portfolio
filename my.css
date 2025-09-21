@@ -388,6 +388,11 @@ body {
     box-shadow: 0 4px 25px var(--shadow-color);
 }
 
+.nav-brand {
+    position: relative;
+    z-index: 106; /* Higher than toggle button to prevent overlap */
+}
+
 .nav-brand h1 {
     font-size: clamp(1.2rem, 3vw, 1.8rem);
     color: var(--heading-color);
@@ -410,6 +415,8 @@ body {
     border-radius: 4px;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     transform: scale(1);
+    position: relative;
+    z-index: 105; /* Lower than nav-brand but higher than nav-menu */
 }
 
 .nav-toggle:hover {
@@ -2198,7 +2205,7 @@ input:checked + .slider:before {
     .nav-toggle {
         display: block;
         position: relative;
-        z-index: 105; /* Highest z-index to always stay on top */
+        z-index: 105; /* Lower than nav-brand */
     }
     
     .nav-menu {
@@ -2212,12 +2219,12 @@ input:checked + .slider:before {
         transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         box-shadow: -5px 0 15px var(--shadow-color);
         border-left: 1px solid var(--border-color);
-        z-index: 102; /* Lower than toggle button */
+        z-index: 102; /* Lowest z-index */
     }
     
     .nav-menu.nav-active {
         right: 0;
-        z-index: 102; /* Keep same z-index when active, below toggle */
+        z-index: 102; /* Keep same z-index when active */
     }
     
     .nav-menu.nav-active .nav-item {
